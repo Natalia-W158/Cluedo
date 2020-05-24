@@ -7,12 +7,16 @@
     <title>Cluedo</title>
 </head>
 <body>
-    <div id="suspects">
+    <h1 id="title">Welcome to the Mystery</h1>
+    <h3 id="question">Who killed Mr. Boddy?</h3>
+    <button id="reveal" onclick="revealMystery()">Reveal</button>
+    <button id="reset" onclick="clearAll()">Reset</button>
     </div>
-    <div id="killer"></div>
+    <div id="killer">
+        <img src="./assets/img/Cluedo_Clue_pack_logo.png" alt="cluedo Logo">
+    </div>
+    <div id="suspects">Mischief managed by</div>
     <!-- <button onclick="selectRandom(n)">Select</button> -->
-    <button onclick="revealMystery()">Reveal</button>
-    <button onclick="clearAll()">Reset</button>
     <script src="assets/js/main.js"></script>
 </body>
 </html>

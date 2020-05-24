@@ -1,7 +1,75 @@
-#suspects{
-    height: 100px;
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(.5fr, .5fr, 1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "title title title"
+                        "question question image"
+                        "reveal reset image"
+                        "answer answer answer";
+    gap: 1em;
+
+   
 }
 
-#suspects > div{
-    border: solid black 2px;
-};
+#title{
+    grid-area: title;
+    font-size: 500%;
+    font-family:'Chelsea Market', cursive;
+
+
+    
+}
+
+#question{
+    grid-area: question;
+    display: block;
+    font-size: 3em;
+    font-family:'Chelsea Market', cursive;
+
+}
+
+#suspects{
+    grid-area: answer;
+    height: 100px;
+    font-family:'Chelsea Market', cursive;
+}
+
+#reset{
+    grid-area: reset;
+    font-family:'Chelsea Market', cursive;
+}
+
+#reveal{
+    grid-area: reveal;
+    font-family:'Chelsea Market', cursive;
+}
+
+button{
+    height: 80%;
+    width: 60%;
+    border-radius: 50%;
+    border: 20px solid red;
+    justify-self: center;
+}
+
+#killer{
+    grid-area: image;
+    width: 500px;
+    font-family:'Chelsea Market', cursive;
+}
+
+#killer img{
+  height: 400px; 
+  
+}
