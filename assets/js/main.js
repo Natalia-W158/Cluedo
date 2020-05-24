@@ -123,6 +123,7 @@ function revealMystery(){
     suspects.innerHTML = `<div>
     <h3>${randomSuspect.firstName} ${randomSuspect.lastName} killed Mr. Boddy using the ${randomWeapon.name} in the ${randomRoom} </h3>
    </div>`
+   suspects.style.color = `${randomSuspect.color}`;
 
 }
 
