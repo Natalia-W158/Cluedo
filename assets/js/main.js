@@ -1,11 +1,11 @@
-suspectsArray = [
-    {
-        firstName: "Jacob", 
-        lastName: "Green",
-        occupation: "Entrepreneur",
-        age: "45",
-        description: "He has a lot of connections",
-        color: "green", 
+const suspectsArray = [
+{
+    firstName: "Jacob", 
+    lastName: "Green",
+    occupation: "Entrepreneur",
+    age: "45",
+    description: "He has a lot of connections",
+    color: "green", 
 
 },
 {
@@ -55,7 +55,7 @@ suspectsArray = [
 },
 ];
 
-weaponsArray = [
+const weaponsArray = [
     {
         name: "rope",
         weight: "10",
@@ -94,50 +94,28 @@ weaponsArray = [
     },
 ];
 
-roomsArray =[
-    {
-        name: "Dining Room",
-    },
-    {
-        name: "Conservatory",
-    },
-    {
-        name: "Kitchen",
-    },
-    {
-        name: "Study",
-    },
-    {
-        name: "Library",
-    },
-    {
-        name: "Billard Room",
-    },
-    {
-        name: "Lounge",
-    },
-    {
-        name: "Ballroom",
-    },
-    {
-        name: "Hall",
-    },
-    {
-        name: "Spa",
-    },
-    {
-        name: "Living Room",
-    },
-    {
-        name: "Observatory",
-    },
-    {
-        name: "Theatre",
-    },
-    {
-        name: "Guest House",
-    },
-    {
-        name: "Patio",
-    },
-]
+const roomsArray = ["Dining Room", "Conservatory", "Kitchen", "Study Room", "Library", "Billiard Room", "Lounge", "Ballroom", "Hall", "Spa", "Living Room", "Observatory", "Theater", "Guest House", "Patio" ]
+
+let suspects = document.getElementById("suspects");
+
+/* 
+function selectRandom(n) {
+    Math.floor(Math.random()*n);
+}; */
+
+let randomSuspect = 
+    suspectsArray[Math.floor(Math.random()*suspectsArray.length)];
+
+let randomRoom =
+    roomsArray[Math.floor(Math.random()*roomsArray.length)];
+
+let randomWeapon =
+    weaponsArray[Math.floor(Math.random()*weaponsArray.length)];
+
+function revealMystery(){
+    suspects.innerHTML += `<div>
+    <h3>${randomSuspect.firstName} ${randomSuspect.lastName} killed Mr. Boddy using the ${randomWeapon.name} in the ${randomRoom} </h3>
+   </div>`
+}
+
+

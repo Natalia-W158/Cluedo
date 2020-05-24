@@ -1,0 +1,7 @@
+#suspects{
+    height: 100px;
+}
+
+#suspects > div{
+    border: solid black 2px;
+};
