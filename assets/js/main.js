@@ -110,13 +110,13 @@ function selectRandom(n) {
 }; */
 
 let randomSuspect = 
-    suspectsArray[Math.floor(Math.random()*suspectsArray.length)];
+    suspectsArray[Math.floor(Math.random()*suspectsArray.length-1)];
 
 let randomRoom =
-    roomsArray[Math.floor(Math.random()*roomsArray.length)];
+    roomsArray[Math.floor(Math.random()*roomsArray.length-1)];
 
 let randomWeapon =
-    weaponsArray[Math.floor(Math.random()*weaponsArray.length)];
+    weaponsArray[Math.floor(Math.random()*weaponsArray.length-1)];
 
 function revealMystery(){
     killerimage.innerHTML = `<div> <img src ="${randomSuspect.image}"> </div>`,
